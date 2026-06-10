@@ -224,7 +224,12 @@
                 text-align: center;
                 margin: 0 auto;
             }
-            h1 { font-size: 5.5rem; }
+            /* Nudge the headline slightly left so it visually centers on some phones */
+            header h1 {
+                font-size: 5.5rem;
+                transform: translateX(-2cm);
+                -webkit-transform: translateX(-2cm);
+            }
             .tagline { font-size: 1.9rem; }
             .profile { font-size: 1.3rem; }
             h2 { font-size: 3.5rem; }
