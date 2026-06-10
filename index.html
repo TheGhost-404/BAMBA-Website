@@ -201,7 +201,25 @@
             100% { height: 110px; opacity: 1; }
         }
         @media (max-width: 768px) {
+            header {
+                padding: 120px 20px 80px;
+            }
+            header .container {
+                max-width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            header h1,
+            header .tagline,
+            header .profile {
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
             h1 { font-size: 5.5rem; }
+            .tagline { font-size: 1.9rem; }
+            .profile { font-size: 1.3rem; }
             h2 { font-size: 3.5rem; }
             .cta, .moon-btn { font-size: 1.8rem; padding: 20px 60px; }
         }
