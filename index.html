@@ -72,7 +72,7 @@
             text-align: center;
             width: 100%;
             position: relative;
-            min-height: 300px;
+            min-height: 520px;
             padding-top: 20px;
         }
         h1 {
@@ -85,8 +85,9 @@
             position: absolute;
             left: 50%;
             top: 48%;
-            transform: translate(-50%, calc(-50% - 1cm));
-            -webkit-transform: translate(-50%, calc(-50% - 1cm));
+            transform: translate(-50%, calc(-50% - 2cm));
+            -webkit-transform: translate(-50%, calc(-50% - 2cm));
+            z-index: 3;
             white-space: nowrap;
         }
         .tagline,
@@ -94,7 +95,8 @@
             width: 100%;
             text-align: center;
             position: relative;
-            margin-top: 200px;
+            margin-top: 420px;
+            z-index: 2;
         }
         @keyframes glow-pulse {
             from { text-shadow: 0 0 2px rgba(0, 191, 255, 0.18), 0 0 6px rgba(0, 255, 255, 0.10); }
@@ -238,17 +240,22 @@
                 position: absolute;
                 left: 50%;
                 top: 45%;
-                transform: translate(-50%, calc(-50% - 1cm));
-                -webkit-transform: translate(-50%, calc(-50% - 1cm));
+                transform: translate(-50%, calc(-50% - 2cm));
+                -webkit-transform: translate(-50%, calc(-50% - 2cm));
                 font-size: 5.5rem;
                 white-space: nowrap;
             }
             header .tagline,
-            header .profile { margin-top: 160px; }
+            header .profile { margin-top: 320px; }
             .tagline { font-size: 1.9rem; }
             .profile { font-size: 1.3rem; }
             h2 { font-size: 3.5rem; }
             .cta, .moon-btn { font-size: 1.8rem; padding: 20px 60px; }
+        }
+        @media (max-width: 420px) {
+            header .container { min-height: 420px; }
+            header h1 { font-size: 4.5rem; }
+            header .tagline, header .profile { margin-top: 260px; }
         }
         /* Tokenomics sign styling */
         .tokenomics-sign {
