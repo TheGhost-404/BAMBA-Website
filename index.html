@@ -49,10 +49,10 @@
             100% { transform: translateY(-30vh) scale(1.5); opacity: 0; }
         }
         header {
-            background: url('https://pbs.twimg.com/media/G_8RjTVW0AMhJQ4.jpg') center/cover no-repeat;
+            background: url('https://pbs.twimg.com/media/G_8RjTVW0AMhJQ4.jpg') top center/cover no-repeat; /* crop: show less height, align to top */
             background-color: rgba(10, 25, 47, 0.8);
             background-blend-mode: multiply;
-            padding: 160px 20px 110px;
+            padding: 80px 20px 40px; /* reduced vertical padding to make header shorter */
             text-align: center;
             position: relative;
             border-bottom: 6px solid var(--primary);
@@ -72,8 +72,8 @@
             text-align: center;
             width: 100%;
             position: relative;
-            min-height: 520px;
-            padding-top: 20px;
+                min-height: 260px; /* reduced so header area is smaller and image cropped */
+                padding-top: 8px;
         }
         h1 {
             font-family: 'Bungee', sans-serif;
@@ -95,7 +95,7 @@
             width: 100%;
             text-align: center;
             position: relative;
-            margin-top: 900px; /* increased to ensure no overlap with absolute h1 on desktop */
+                margin-top: 260px; /* tightened for mobile */
             z-index: 2;
         }
         @keyframes glow-pulse {
@@ -103,6 +103,7 @@
             to   { text-shadow: 0 0 4px rgba(0, 191, 255, 0.14), 0 0 8px rgba(0, 255, 255, 0.08); }
         }
         .tagline { font-size: 2.2rem; color: var(--accent); text-shadow: 0 0 4px rgba(0,255,255,0.22); }
+        .profile { margin-top: 8px; } /* tight spacing between tagline and profile */
         .profile a { color: var(--accent); text-decoration: none; font-weight: 700; text-shadow: 0 0 4px rgba(0,255,255,0.18); }
         .profile a:hover { text-shadow: 0 0 8px rgba(0,255,255,0.22); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
@@ -247,6 +248,7 @@
             }
             header .tagline,
             header .profile { margin-top: 320px; }
+            header .profile { margin-top: 8px; } /* tight spacing between tagline and profile on mobile */
             .tagline { font-size: 1.9rem; }
             .profile { font-size: 1.3rem; }
             h2 { font-size: 3.5rem; }
@@ -256,6 +258,7 @@
             header .container { min-height: 420px; }
             header h1 { font-size: 4.5rem; }
             header .tagline, header .profile { margin-top: 260px; }
+            header .profile { margin-top: 8px; } /* tight spacing between tagline and profile on small screens */
         }
         /* Tokenomics sign styling */
         .tokenomics-sign {
